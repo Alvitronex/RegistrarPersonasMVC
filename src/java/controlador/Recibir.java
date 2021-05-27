@@ -28,12 +28,12 @@ public class Recibir extends HttpServlet {
             throws ServletException, IOException {
        String dui = request. getParameter("txtDui");
        String apellidos = request.getParameter("txtApellidos");
-       String nombre = request.getParameter("txtNombre");
+       String nombres = request.getParameter("txtNombres");
        
         Persona person = new Persona();
         person.setDui(dui);
         person.setApellidos(apellidos);
-        person.setNombre(nombre);
+        person.setNombres(nombres);
         
         if (person.insertarDatos() == true) {
             request.getRequestDispatcher("exito.jsp").forward(request, response);

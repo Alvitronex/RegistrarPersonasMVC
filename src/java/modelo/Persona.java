@@ -9,7 +9,7 @@ public class Persona
 {
     String dui;
     String apellidos;
-    String nombre;
+    String nombres;
 
     Connection cnn;
     Statement state;
@@ -31,13 +31,13 @@ public class Persona
     public Persona(String dui, String apellidos, String nombre) {
         this.dui = dui;
         this.apellidos = apellidos;
-        this.nombre = nombre;
+        this.nombres = nombres;
     }
     
     
     public boolean insertarDatos(){
         try {
-            String miQuery = "insert into tb_persona values('" + dui + "', '" + apellidos +"', '" + nombre + "');";
+            String miQuery = "insert into tb_persona values('" + dui + "', '" + apellidos +"', '" + nombres + "');";
             int estado = 0;
             state = cnn.createStatement();
             estado = state.executeUpdate(miQuery);
@@ -81,12 +81,12 @@ public class Persona
         this.apellidos = apellidos;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombres() {
+        return nombres;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
     
     
