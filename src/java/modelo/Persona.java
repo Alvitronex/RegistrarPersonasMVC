@@ -65,6 +65,9 @@ public class Persona
             }
             return person;
         }
+        
+        
+       
     public String getDui() {
         return dui;
     }
